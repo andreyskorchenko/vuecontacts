@@ -122,10 +122,10 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
 
 .contact-card {
   width: 220px;
-  height: auto;
+  height: 150px;
   background: #fff;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
-  padding: 70px 10px 20px 10px;
+  padding: 70px 10px 0 10px;
   position: fixed;
   top: 120px;
   left: 20px;
@@ -198,24 +198,22 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
 
 .contact-info {
   width: calc(100% - 260px);
-  min-height: 100vh;
-  background: #fff;
+  height: auto;
   overflow: hidden;
   margin-left: 260px;
-  padding-top: 60px;
+  padding: 70px 20px 20px 20px;
 
   @media screen and (max-width: 680px) {
     width: 100%;
     margin-top: 120px;
     margin-left: 0;
-    padding-top: 0;
+    padding: 20px;
   }
 
   &__inputs {
     width: 100%;
     height: auto;
     overflow: hidden;
-    padding: 20px;
   }
 }
 
@@ -225,7 +223,8 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
   height: 40px;
   display: flex;
   overflow: hidden;
-  padding: 0 20px 0 50px;
+  margin-top: 20px;
+  padding: 0 20px 0 30px;
   position: relative;
 
   &:after {
@@ -245,7 +244,7 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
     cursor: pointer;
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 0;
 
     &:before {
       content: "";
@@ -271,7 +270,7 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
   }
 
   &__name {
-    width: 100px;
+    width: 80px;
     padding: 0 10px;
     color: #2d2d2d;
     font-size: 12px;

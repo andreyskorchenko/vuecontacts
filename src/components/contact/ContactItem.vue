@@ -192,7 +192,7 @@ $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
 }
 
 .contact-info__name {
-  width: 100px;
+  width: 80px;
   padding: 0 0 0 10px;
   flex-shrink: 0;
   line-height: 40px;

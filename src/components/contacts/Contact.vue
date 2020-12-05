@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact" v-on:touchstart="swipeStart" v-on:touchend="swipeEnd">
     <div
       class="contact__info transition"
       v-bind:class="{ contact__info_showmenu: isMenuContact }"
@@ -63,11 +63,32 @@ export default {
   },
   data: () => ({
     isMenuContact: false,
+    timeSwipe: 0,
+    touchStartX: 0,
   }),
   methods: {
     ...mapActions(["showDeleteContact"]),
     toggleMenuContact() {
       this.isMenuContact = !this.isMenuContact;
+    },
+    swipeStart(e) {
+      this.timeSwipe = Date.now();
+      this.touchStartX = e.changedTouches[0].clientX;
+    },
+    swipeEnd(e) {
+      if (
+        this.touchStartX - e.changedTouches[0].clientX > 0 &&
+        Date.now() - this.timeSwipe <= 220
+      ) {
+        this.isMenuContact = true;
+      }
+
+      if (
+        this.touchStartX - e.changedTouches[0].clientX < 0 &&
+        Date.now() - this.timeSwipe <= 220
+      ) {
+        this.isMenuContact = false;
+      }
     },
   },
 };
@@ -185,7 +206,7 @@ export default {
   }
 
   &__phone p {
-    color: #eee;
+    color: #dfdfdf;
     font-size: 12px;
   }
 

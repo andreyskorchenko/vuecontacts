@@ -47,9 +47,9 @@ export default {
 <style lang="scss" scoped>
 .contacts {
   width: 100%;
-  min-height: 100vh;
+  height: auto;
   background: #fff;
-  padding-top: 60px;
+  padding-top: 50px;
   overflow: hidden;
 }
 

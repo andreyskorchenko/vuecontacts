@@ -54,9 +54,11 @@ a {
 .b5radius {
   border-radius: 5px;
 }
+
 .b50radius {
   border-radius: 50%;
 }
+
 .transition {
   transition: 0.15s linear;
 }
@@ -71,8 +73,8 @@ a {
   width: 100%;
   height: 50px;
   background: #fff;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;

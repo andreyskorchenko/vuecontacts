@@ -1,12 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import Contacts from "../mocks/contacts";
+import contacts from "../mocks/contacts";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    contacts: [...Contacts],
+    contacts: [...contacts],
     dataDeleteContact: {},
     isShowDeleteContact: false,
     isShowCreateContact: false,
